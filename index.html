@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Khaal LLC — One Page Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root { --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
+      html, body, #root { height: 100%; }
+      body { margin: 0; font-family: var(--font-sans); }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <div id="root" class="min-h-screen"></div>
+
+    <!-- React 18 + ReactDOM (development CDN) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel Standalone for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Your JSX code -->
+    <script type="text/babel">
+export default function Website() {
+  return (
+    <div className="min-h-screen w-full text-white relative">
+      {/* Global teal gradient + subtle creamy glow like logo background */}
+      <div className="absolute inset-0 -z-20 bg-gradient-to-br from-teal-800 via-teal-600 to-emerald-500" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_70%_10%,#f5f3eb55_0%,transparent_60%)]" />
+
+      {/* Header */}
+      <header className="sticky top-0 z-30 w-full border-b border-emerald-500/30 bg-teal-800/70 backdrop-blur shadow-sm">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+          <div className="flex items-center gap-3">
+            <img src="/logo.JPG" alt="Khaal logo" className="h-10 w-10 drop-shadow-md rounded" />
+            <span className="text-xl font-semibold tracking-wide">Khaal LLC</span>
+          </div>
+          <nav className="hidden gap-6 text-sm md:flex">
+            <a href="#about" className="transition-colors hover:text-emerald-200">About</a>
+            <a href="#services" className="transition-colors hover:text-emerald-200">Services</a>
+            <a href="#contact" className="transition-colors hover:text-emerald-200">Contact</a>
+          </nav>
+          <a href="#contact" className="rounded-xl bg-white px-4 py-2 text-sm font-medium text-teal-800 shadow-md transition hover:scale-105 hover:bg-gray-100">Get in touch</a>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        {/* extra creamy hint bottom-left */}
+        <div className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-[#f5f3eb] opacity-30 blur-3xl" />
+        <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-20 md:grid-cols-2 md:py-28">
+          <div className="animate-fadeIn">
+            <h1 className="text-4xl font-extrabold leading-tight md:text-5xl">We help brands scale on <span className="bg-gradient-to-r from-white to-emerald-200 bg-clip-text text-transparent">Amazon, Walmart, and TikTok</span>.</h1>
+            <p className="mt-5 max-w-prose text-emerald-100">Khaal LLC connects distributors and brands to high‑growth digital marketplaces. We handle compliance, listings, and growth so you can focus on sourcing products.</p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <a href="#contact" className="rounded-xl bg-white px-5 py-3 text-teal-800 shadow-lg transition hover:scale-105 hover:bg-gray-100">Partner with us</a>
+              <a href="#services" className="rounded-xl border border-white px-5 py-3 text-white transition hover:border-emerald-200 hover:text-emerald-200 hover:scale-105">Our services</a>
+            </div>
+          </div>
+          <div className="flex items-center justify-center animate-fadeIn delay-200">
+            <img src="/logo.JPG" alt="Khaal logo large" className="h-56 w-56 rounded-3xl border border-emerald-300 bg-white shadow-2xl transition hover:rotate-6 hover:scale-105 md:h-72 md:w-72" />
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="bg-white/5 backdrop-blur">
+        <div className="mx-auto max-w-6xl px-4 py-20">
+          <h2 className="text-3xl font-bold text-white">About Khaal</h2>
+          <p className="mt-4 max-w-3xl text-emerald-100 leading-relaxed">Khaal LLC is a marketplace growth partner. We focus on helping distributors and brands navigate Amazon, Walmart, and TikTok Shop with a streamlined approach—from account setup to product optimization and marketing execution.</p>
+        </div>
+      </section>
+
+      {/* Services (now only 2 cards) */}
+      <section id="services" className="relative bg-white/5 backdrop-blur">
+        <div className="mx-auto max-w-6xl px-4 py-20">
+          <h2 className="text-3xl font-bold text-white">Services</h2>
+          <div className="mt-10 grid gap-8 md:grid-cols-2">
+            {/* Marketplace Growth */}
+            <div className="rounded-2xl border border-emerald-300/60 bg-white/10 p-6 shadow-md transition hover:-translate-y-2 hover:shadow-xl">
+              <h3 className="text-lg font-semibold text-white">Marketplace Growth</h3>
+              <ul className="mt-3 list-inside list-disc text-sm text-emerald-100 space-y-1">
+                <li>Amazon Seller Central & Walmart Seller setup</li>
+                <li>TikTok Shop onboarding & product listing</li>
+                <li>Authorized distributor partnerships</li>
+              </ul>
+            </div>
+
+            {/* IT Services */}
+            <div className="rounded-2xl border border-emerald-300/60 bg-white/10 p-6 shadow-md transition hover:-translate-y-2 hover:shadow-xl">
+              <h3 className="text-lg font-semibold text-white">IT Services</h3>
+              <ul className="mt-3 space-y-2 text-sm text-emerald-100">
+                <li>
+                  <span className="font-medium text-white">Bot Development —</span>
+                  <span className="ml-1">Creating reliable and scalable Telegram bots with custom features and API integrations.</span>
+                </li>
+                <li>
+                  <span className="font-medium text-white">Web Development —</span>
+                  <span className="ml-1">Building responsive, high‑performance web applications using modern frameworks.</span>
+                </li>
+                <li>
+                  <span className="font-medium text-white">Illustration</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="bg-white/5 backdrop-blur">
+        <div className="mx-auto max-w-6xl px-4 py-20">
+          <h2 className="text-3xl font-bold text-white">Get in touch</h2>
+          <p className="mt-3 max-w-prose text-emerald-100">Looking to expand your brand on Amazon, Walmart, or TikTok? Let’s talk.</p>
+          <div className="mt-8 grid gap-8 md:grid-cols-3">
+            <a href="mailto:sales@khaal.site" className="rounded-2xl border border-emerald-300/60 bg-white/10 p-6 shadow-md transition hover:scale-105 hover:border-white">
+              <div className="text-sm text-emerald-200">Email</div>
+              <div className="mt-1 font-medium text-white">sales@khaal.site</div>
+            </a>
+            <div className="rounded-2xl border border-emerald-300/60 bg-white/10 p-6 shadow-md transition hover:scale-105">
+              <div className="text-sm text-emerald-200">Business</div>
+              <div className="mt-1 font-medium text-white">Khaal LLC</div>
+              <div className="text-sm text-emerald-100">United States</div>
+            </div>
+            <div className="rounded-2xl border border-emerald-300/60 bg-white/10 p-6 shadow-md transition hover:scale-105">
+              <div className="text-sm text-emerald-200">Social</div>
+              <div className="mt-1 space-x-3 text-sm text-white">
+                <a href="#" className="underline decoration-emerald-200 underline-offset-4 hover:text-emerald-200">TikTok</a>
+                <a href="#" className="underline decoration-emerald-200 underline-offset-4 hover:text-emerald-200">Instagram</a>
+                <a href="#" className="underline decoration-emerald-200 underline-offset-4 hover:text-emerald-200">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-emerald-500/30 bg-teal-800/70 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-6 text-sm text-emerald-200">
+          <span>© {new Date().getFullYear()} Khaal LLC. All rights reserved.</span>
+          <span className="flex items-center gap-2">
+            <img src="/logo.JPG" alt="Khaal logo small" className="h-5 w-5 rounded" />
+            Built with care
+          </span>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(Website));
+    </script>
+  </body>
+</html>
